@@ -108,3 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Re-evaluate visibility logic if window resizes
     window.addEventListener('resize', updateCarousel);
 });
+
+    // Re-evaluate visibility logic if window resizes
+    window.addEventListener('resize', updateCarousel);
+});
