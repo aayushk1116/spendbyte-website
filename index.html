@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendByte | Personal Finance Tracker</title>
+    <meta name="description" id="meta-desc" content="SpendByte - Track every rupee. Control every byte. A minimalist and modern personal finance tracker for Android.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons (Alternative to Lucide for easy CDN usage) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="ph-fill ph-wallet"></i>
+                <span>SpendByte</span>
+            </div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#whats-new">Features</a>
+                <a href="#download">Download</a>
+            </div>
+            <a href="#download" class="btn btn-primary sm">Download App</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+        <div class="hero-content">
+            <div class="badge">New Update v<span class="app-version">1.2.0</span> 🚀</div>
+            <h1 class="hero-title">Track smarter.<br><span class="gradient-text">Spend better.</span></h1>
+            <p class="hero-subtitle">The definitive personal finance tracker that respects your privacy. No ads. Fast, lightweight, and offline-first.</p>
+            <div class="hero-actions">
+                <a href="#download" class="btn btn-primary lg download-btn">
+                    <i class="ph-fill ph-download-simple"></i>
+                    Download APK
+                </a>
+                <a href="#whats-new" class="btn btn-secondary lg">See What's New</a>
+            </div>
+            <p class="hero-meta">APK Size: ~50MB • Free</p>
+        </div>
+        
+        <!-- Product Preview Section (integrated into hero visual) -->
+        <div class="hero-visual">
+            <div class="phone-mockup">
+                <div class="phone-screen">
+                    <div class="app-preview">
+                        <div class="app-header">
+                            <p>Good morning, Aayush</p>
+                            <h2>₹42,500.00</h2>
+                            <p class="balance-sub">Total Balance</p>
+                        </div>
+                        <div class="app-cards">
+                            <div class="app-card income">
+                                <i class="ph ph-arrow-down-left"></i>
+                                <div>
+                                    <p>Income</p>
+                                    <h3>₹60,000</h3>
+                                </div>
+                            </div>
+                            <div class="app-card expense">
+                                <i class="ph ph-arrow-up-right"></i>
+                                <div>
+                                    <p>Expense</p>
+                                    <h3>₹17,500</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-transactions">
+                            <h3>Recent Transactions</h3>
+                            <div class="tx-item">
+                                <div class="tx-icon bg-blue"><i class="ph ph-shopping-cart"></i></div>
+                                <div class="tx-details">
+                                    <p>Groceries</p>
+                                    <span>Today, 10:45 AM</span>
+                                </div>
+                                <div class="tx-amount negative">-₹1,250</div>
+                            </div>
+                            <div class="tx-item">
+                                <div class="tx-icon bg-purple"><i class="ph ph-lightning"></i></div>
+                                <div class="tx-details">
+                                    <p>Electricity Bill</p>
+                                    <span>Yesterday</span>
+                                </div>
+                                <div class="tx-amount negative">-₹850</div>
+                            </div>
+                            <div class="tx-item">
+                                <div class="tx-icon bg-green"><i class="ph ph-briefcase"></i></div>
+                                <div class="tx-details">
+                                    <p>Freelance</p>
+                                    <span>12 Mar 2026</span>
+                                </div>
+                                <div class="tx-amount positive">+₹15,000</div>
+                            </div>
+                        </div>
+                        <!-- Bottom Nav -->
+                        <div class="app-bottom-nav">
+                            <i class="ph-fill ph-house active"></i>
+                            <i class="ph ph-chart-pie-slice"></i>
+                            <div class="fab"><i class="ph ph-plus"></i></div>
+                            <i class="ph ph-wallet"></i>
+                            <i class="ph ph-gear"></i>
+                        </div>
+                        <!-- Mockup gradient overlay -->
+                        <div class="mockup-glare"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Floating Elements -->
+            <div class="floating-card fb-1">
+                <i class="ph-fill ph-chart-line-up text-green"></i>
+                <div>
+                    <p>Weekly Spending</p>
+                    <p class="bold">Below Average</p>
+                </div>
+            </div>
+            <div class="floating-card fb-2">
+                <i class="ph-fill ph-shield-check text-purple"></i>
+                <div>
+                    <p>Privacy First</p>
+                    <p class="bold">100% Offline</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- What's New Section -->
+    <section id="whats-new" class="whats-new section light-bg">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>What's New in v<span class="app-version">1.2.0</span></h2>
+                <p>We've overhauled the experience with a premium Glassmorphism UI and powerful new features.</p>
+            </div>
+            <div class="features-grid" id="changelog-grid">
+                <!-- Dynamically populated by JS based on APP_VERSION -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Showcase Highlight Section 1 -->
+    <section class="feature-highlight section">
+        <div class="container">
+            <div class="feature-card reveal">
+                <div class="feature-content">
+                    <h2>Premium Glass UI & AMOLED</h2>
+                    <p>SpendByte <span class="app-version">1.2.0</span> introduces a true black environment perfectly suited for modern OLED displays, layered with highly optimized glassmorphism cards and blur effects.</p>
+                </div>
+                <div class="feature-image">
+                    <img 
+                        src="/images/features/glass-ui.png" 
+                        alt="Glass UI Preview"
+                        loading="lazy"
+                        onerror="this.style.display='none'"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Showcase Highlight Section 2 -->
+    <section class="feature-highlight section light-bg">
+        <div class="container">
+            <div class="feature-card flex-reverse reveal">
+                <div class="feature-content">
+                    <h2>Smart Insights</h2>
+                    <p>Unlock context behind your spending. Our new Smart Insights provide immediate visual feedback on your financial health without diving into complex analytics.</p>
+                </div>
+                <div class="feature-image">
+                    <img 
+                        src="/images/features/smart-insights.png" 
+                        alt="Smart Insights Preview"
+                        loading="lazy"
+                        onerror="this.style.display='none'"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Showcase Highlight Section 3 -->
+    <section class="feature-highlight section">
+        <div class="container">
+            <div class="feature-card reveal">
+                <div class="feature-content">
+                    <h2>Advanced Split Expenses</h2>
+                    <p>Divide restaurant bills, handle group trips, and track who owes you effortlessly with our revamped Split feature supporting dedicated groups and participants.</p>
+                </div>
+                <div class="feature-image">
+                    <img 
+                        src="/images/features/split-expenses.png" 
+                        alt="Split Expenses Preview"
+                        loading="lazy"
+                        onerror="this.style.display='none'"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screen Showcase (Horizontal Scroll) -->
+    <section class="app-screens section light-bg">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Experience the Flow</h2>
+                <p>Silky smooth navigation and unified design across every screen.</p>
+            </div>
+            <div class="showcase-carousel reveal delay-1" style="width:100%; overflow:hidden; padding:20px 0;">
+                <div class="showcase-track" style="display:flex; gap:30px; overflow-x:auto; scroll-snap-type:x mandatory; padding:20px; scrollbar-width:none;">
+                    <img src="/images/features/dashboard.png" alt="Dashboard Preview" class="feature-img" loading="lazy" style="flex:0 0 auto; width:100%; max-width:280px; height:auto; object-fit:contain; border-radius:20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); scroll-snap-align:center;" onerror="this.style.display='none'">
+                    <img src="assets/images/5.jpeg" alt="Settings" class="feature-img" loading="lazy" style="flex:0 0 auto; width:100%; max-width:280px; height:auto; object-fit:contain; border-radius:20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); scroll-snap-align:center;" onerror="this.style.display='none'">
+                    <img src="assets/images/6.jpeg" alt="Analytics" class="feature-img" loading="lazy" style="flex:0 0 auto; width:100%; max-width:280px; height:auto; object-fit:contain; border-radius:20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); scroll-snap-align:center;" onerror="this.style.display='none'">
+                    <img src="assets/images/7.jpeg" alt="Flow" class="feature-img" loading="lazy" style="flex:0 0 auto; width:100%; max-width:280px; height:auto; object-fit:contain; border-radius:20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); scroll-snap-align:center;" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Features Section -->
+    <section id="features" class="features section light-bg">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Designed for clarity</h2>
+                <p>Everything you need to manage your money, without the clutter.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal delay-1">
+                    <div class="feature-icon bg-gradient-1"><i class="ph ph-arrows-left-right"></i></div>
+                    <h3>Expense & Income</h3>
+                    <p>Log your transactions in seconds. Categorize them easily and know exactly where your money goes.</p>
+                </div>
+                <div class="feature-card reveal delay-2">
+                    <div class="feature-icon bg-gradient-2"><i class="ph ph-chart-bar"></i></div>
+                    <h3>Weekly Insights</h3>
+                    <p>Get beautiful, easy-to-understand charts showing your spending habits and financial health.</p>
+                </div>
+                <div class="feature-card reveal delay-3">
+                    <div class="feature-icon bg-gradient-3"><i class="ph ph-credit-card"></i></div>
+                    <h3>Payment Modes</h3>
+                    <p>Track balances across all your accounts - UPI, Cash, Cards, and Digital Wallets in one place.</p>
+                </div>
+                <div class="feature-card reveal delay-1">
+                    <div class="feature-icon bg-gradient-4"><i class="ph ph-squares-four"></i></div>
+                    <h3>Smart Dashboard</h3>
+                    <p>A clean, focused home screen that gives you a quick overview of your current financial status.</p>
+                </div>
+                <div class="feature-card reveal delay-2">
+                    <div class="feature-icon bg-gradient-5"><i class="ph ph-list-dashes"></i></div>
+                    <h3>Clean History</h3>
+                    <p>Powerful filtering and search capabilities to find past transactions instantly.</p>
+                </div>
+                <div class="feature-card reveal delay-3">
+                    <div class="feature-icon bg-gradient-6"><i class="ph ph-rocket"></i></div>
+                    <h3>Fast & Lightweight</h3>
+                    <p>Built perfectly for Android. Smooth animations with zero lag and minimal battery consumption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Guide Section -->
+    <section id="how-it-works" class="install-guide section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Get started in seconds</h2>
+                <p>Install the APK directly and safely on your Android device.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card reveal">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="ph ph-download"></i></div>
+                    <h3>Download</h3>
+                    <p>Tap the download button to save the SpendByte APK to your device.</p>
+                </div>
+                <!-- Line connector -->
+                <div class="step-connector"></div>
+                <div class="step-card reveal delay-1">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="ph ph-lock-key-open"></i></div>
+                    <h3>Enable Sources</h3>
+                    <p>Go to Settings > Security and enable "Install Unknown Apps".</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-card reveal delay-2">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="ph ph-file-text"></i></div>
+                    <h3>Open File</h3>
+                    <p>Locate the downloaded APK in your file manager and tap it.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-card reveal delay-3">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i class="ph ph-rocket"></i></div>
+                    <h3>Start Using</h3>
+                    <p>Open the app, customize your settings, and start taking control of your finances.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section id="security" class="security section">
+        <div class="container">
+            <div class="security-content reveal">
+                <div class="security-text">
+                    <h2>Your data stays yours.</h2>
+                    <p>We built SpendByte with a privacy-first mindset. Financial data is extremely personal, which is why we don't spy on it.</p>
+                    <ul class="security-list">
+                        <li>
+                            <i class="ph-fill ph-check-circle text-green"></i>
+                            <div>
+                                <strong>100% Offline-First</strong>
+                                <span>No account needed. No cloud sync. Everything is stored locally on your phone.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ph-fill ph-check-circle text-green"></i>
+                            <div>
+                                <strong>Zero Ads, Zero Trackers</strong>
+                                <span>A highly focused experience without annoying advertisements or analytics tracking.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ph-fill ph-check-circle text-green"></i>
+                            <div>
+                                <strong>Safe APK</strong>
+                                <span>Clean code, verified build, requiring only essential storage permissions.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="security-visual">
+                    <div class="shield-mockup">
+                        <i class="ph-fill ph-shield-check"></i>
+                        <div class="ripple"></div>
+                        <div class="ripple r2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Screenshots Carousel -->
+    <section class="screenshots section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Designed for elegance</h2>
+                <p>A beautiful interface that you'll love using every day.</p>
+            </div>
+            
+            <div class="carousel-container reveal delay-1">
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Dash -->
+                     <div class="carousel-item">
+                        <div class="screen-frame">
+                            <div class="content dashboard-mock">
+                                <div class="hdr">Dash</div>
+                                <div class="pie"></div>
+                                <div class="bars"><span></span><span></span><span></span></div>
+                            </div>
+                        </div>
+                        <p>Smart Dashboard</p>
+                    </div>
+                    <!-- Analytics -->
+                    <div class="carousel-item">
+                        <div class="screen-frame">
+                            <div class="content analytics-mock">
+                                <div class="hdr">Analytics</div>
+                                <div class="chart"><svg viewBox="0 0 100 50"><path d="M0 40 Q20 20, 40 30 T80 10 T100 20" fill="none" stroke="url(#g1)" stroke-width="4"/></svg></div>
+                                <div class="cats"><div class="c"></div><div class="c"></div><div class="c"></div></div>
+                            </div>
+                        </div>
+                        <p>Beautiful Charts</p>
+                    </div>
+                    <!-- Add Tx -->
+                    <div class="carousel-item active">
+                        <div class="screen-frame">
+                            <div class="content add-mock">
+                                <div class="hdr">Add Transaction</div>
+                                <div class="amt">₹ 5,000</div>
+                                <div class="inputs"><div class="i"></div><div class="i"></div></div>
+                                <div class="btn">Save</div>
+                            </div>
+                        </div>
+                        <p>Fast Entry</p>
+                    </div>
+                    <!-- History -->
+                    <div class="carousel-item">
+                        <div class="screen-frame">
+                            <div class="content history-mock">
+                                <div class="hdr">History</div>
+                                <div class="list">
+                                    <div class="li"></div><div class="li"></div><div class="li"></div><div class="li"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Detailed History</p>
+                    </div>
+                    <!-- Settings -->
+                    <div class="carousel-item">
+                        <div class="screen-frame">
+                            <div class="content settings-mock">
+                                <div class="hdr">Settings</div>
+                                <div class="opts">
+                                    <div class="o"></div><div class="o"></div><div class="o"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Customizable</p>
+                    </div>
+                </div>
+                <div class="carousel-nav">
+                    <button class="nav-btn prev" id="prev-btn" aria-label="Previous screenshot"><i class="ph ph-caret-left"></i></button>
+                    <button class="nav-btn next" id="next-btn" aria-label="Next screenshot"><i class="ph ph-caret-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download section">
+        <div class="container">
+            <div class="download-card reveal">
+                <div class="download-info">
+                    <h2>Ready to take control?</h2>
+                    <p>Join organized individuals who track their finances smartly.</p>
+                    <div class="app-details">
+                        <div class="detail">
+                            <span>Version</span>
+                            <strong><span class="app-version">1.2.0</span></strong>
+                        </div>
+                        <div class="detail">
+                            <span>Size</span>
+                            <strong>50 MB</strong>
+                        </div>
+                        <div class="detail">
+                            <span>Requirements</span>
+                            <strong>Android 8.0+</strong>
+                        </div>
+                        <div class="detail">
+                            <span>Updated</span>
+                            <strong>Mar 2026</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="download-action">
+                    <a href="spendbyte-app.apk" class="btn btn-primary super-lg download-btn" download>
+                        <i class="ph-fill ph-download-simple"></i>
+                        Download APK
+                    </a>
+                    <p class="safe-note"><i class="ph ph-shield-check"></i> Verified and safe to install</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Ambient background glow for download section -->
+        <div class="ambient-glow bg-blue"></div>
+        <div class="ambient-glow bg-purple"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="ph-fill ph-wallet"></i>
+                        <span>SpendByte</span>
+                    </div>
+                    <p>Track every rupee. Control every byte.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h3>App</h3>
+                        <a href="#features">Features</a>
+                        <a href="#how-it-works">Installation</a>
+                        <a href="spendbyte-app.apk" download>Download</a>
+                    </div>
+                    <div class="link-group">
+                        <h3>Legal</h3>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                    <div class="link-group">
+                        <h3>Contact</h3>
+                        <a href="mailto:mailme.ak1116@gmail.com">mailme.ak1116@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SpendByte v<span class="app-version">1.2.0</span>. Made with ❤️ by Aayush Kumar.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CSS gradients for SVG -->
+    <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+      <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#8b5cf6" />
+        <stop offset="100%" stop-color="#3b82f6" />
+      </linearGradient>
+    </svg>
+
+    <script src="script.js"></script>
+</body>
+</html>
